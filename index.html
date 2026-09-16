@@ -1,18 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Canais oficiais da HARD Ecommerce">
-    <title>HARD Ecommerce | Links Oficiais</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Canais oficiais da HARD Ecommerce">
+<title>HARD Ecommerce | Links Oficiais</title>
 
-    <link rel="stylesheet" href="estilo.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+:root {
+    --red: #e31b23;
+    --red-dark: #b91017;
+    --black: #070707;
+    --card: #151515;
+    --card-hover: #1d1d1d;
+    --white: #ffffff;
+    --gray: #a8a8a8;
+    --border: #292929;
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #202020 0%, #0d0d0d 38%, #050505 100%);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 580px;
+    padding: 50px 22px 32px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo-hard {
+    display: block;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.logo-ecommerce {
+    display: block;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-top: 7px;
+}
+
+.header h1 {
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 440px;
+    margin: auto;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.card {
+    min-height: 75px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.card:hover {
+    background: var(--card-hover);
+    border-color: #444;
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: #222;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.info strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.info span {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.arrow {
+    color: #777;
+    font-size: 20px;
+}
+
+.review {
+    margin-top: 30px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 17px;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    height: 1px;
+    background: #292929;
+    flex: 1;
+}
+
+.google {
+    min-height: 92px;
+    background: linear-gradient(135deg, var(--red), var(--red-dark));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 16px 18px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(227,27,35,.18);
+    transition: 0.2s;
+}
+
+.google:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(227,27,35,.28);
+}
+
+.google-icon {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background: white;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.google-info {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.google-info strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.google-info span {
+    display: block;
+    font-size: 11px;
+    line-height: 1.4;
+    color: rgba(255,255,255,.85);
+}
+
+.google .arrow {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 38px;
+    color: #666;
+}
+
+footer strong {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    font-size: 9px;
+    margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 38px 17px 26px;
+    }
+
+    .logo-hard {
+        font-size: 36px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        min-height: 72px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -20,9 +256,10 @@
 <main class="container">
 
     <header class="header">
-        <div class="logo-area">
-            <span class="hard">HARD</span>
-            <span class="ecommerce">ECOMMERCE</span>
+
+        <div class="logo">
+            <span class="logo-hard">HARD</span>
+            <span class="logo-ecommerce">ECOMMERCE</span>
         </div>
 
         <h1>Acompanhe a HARD</h1>
@@ -30,83 +267,83 @@
         <p>
             Conteúdo, estratégia e inteligência para quem quer crescer nos marketplaces.
         </p>
+
     </header>
 
     <section class="links">
 
-        <a class="link-card" href="https://www.instagram.com/hardecommerce/" target="_blank">
-            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-            <div class="link-text">
+        <a class="card" href="https://www.instagram.com/hardecommerce/" target="_blank">
+            <div class="icon">IG</div>
+            <div class="info">
                 <strong>Instagram</strong>
                 <span>Siga a HARD</span>
             </div>
-            <i class="fa-solid fa-chevron-right arrow"></i>
+            <div class="arrow">›</div>
         </a>
 
-        <a class="link-card" href="https://www.tiktok.com/@harde_commerce" target="_blank">
-            <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
-            <div class="link-text">
+        <a class="card" href="https://www.tiktok.com/@harde_commerce" target="_blank">
+            <div class="icon">TT</div>
+            <div class="info">
                 <strong>TikTok</strong>
                 <span>Acompanhe nossos vídeos</span>
             </div>
-            <i class="fa-solid fa-chevron-right arrow"></i>
+            <div class="arrow">›</div>
         </a>
 
-        <a class="link-card" href="https://www.youtube.com/channel/UCTi3FYCFs2OOOMQr4vZoCSQ" target="_blank">
-            <div class="icon"><i class="fa-brands fa-youtube"></i></div>
-            <div class="link-text">
+        <a class="card" href="https://www.youtube.com/channel/UCTi3FYCFs2OOOMQr4vZoCSQ" target="_blank">
+            <div class="icon">YT</div>
+            <div class="info">
                 <strong>YouTube</strong>
                 <span>Inscreva-se no canal</span>
             </div>
-            <i class="fa-solid fa-chevron-right arrow"></i>
+            <div class="arrow">›</div>
         </a>
 
-        <a class="link-card" href="https://br.linkedin.com/company/hard-ecommerce" target="_blank">
-            <div class="icon"><i class="fa-brands fa-linkedin-in"></i></div>
-            <div class="link-text">
+        <a class="card" href="https://br.linkedin.com/company/hard-ecommerce" target="_blank">
+            <div class="icon">in</div>
+            <div class="info">
                 <strong>LinkedIn</strong>
                 <span>Acompanhe a HARD</span>
             </div>
-            <i class="fa-solid fa-chevron-right arrow"></i>
+            <div class="arrow">›</div>
         </a>
 
-        <a class="link-card" href="https://x.com/Hardecommerce" target="_blank">
-            <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
-            <div class="link-text">
+        <a class="card" href="https://x.com/Hardecommerce" target="_blank">
+            <div class="icon">X</div>
+            <div class="info">
                 <strong>X</strong>
                 <span>Siga nossas atualizações</span>
             </div>
-            <i class="fa-solid fa-chevron-right arrow"></i>
+            <div class="arrow">›</div>
         </a>
 
     </section>
 
-    <section class="avaliacao">
+    <section class="review">
 
-        <div class="divisor">
+        <div class="divider">
             <span>CONHECE O NOSSO TRABALHO?</span>
         </div>
 
-        <a class="google-card"
+        <a class="google"
            href="https://maps.app.goo.gl/j4GvK8YyGYazhTeW8"
            target="_blank">
 
-            <div class="google-icon">
-                <i class="fa-brands fa-google"></i>
-            </div>
+            <div class="google-icon">G</div>
 
-            <div class="google-text">
+            <div class="google-info">
                 <strong>Avalie a HARD no Google</strong>
                 <span>Sua experiência ajuda outras empresas a conhecerem nosso trabalho.</span>
             </div>
 
-            <i class="fa-solid fa-chevron-right arrow"></i>
+            <div class="arrow">›</div>
+
         </a>
 
     </section>
 
     <footer>
-        <span>HARD ECOMMERCE</span>
+        <strong>HARD ECOMMERCE</strong>
         <p>Estratégia • Dados • Performance</p>
     </footer>
 
